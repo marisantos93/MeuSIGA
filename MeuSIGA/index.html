@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/arquivo.css">
+
+  <!-- Funções que tratam as escolhas do usuário-->
+  <script src="js/background.js"></script>
+
+  <!-- Aparencia das abas -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Transição das abas-->
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <title>MeuSIGA</title>
+
+</head>
+
+<body class="layout" >
+
+  <h4 class ="titulo">  MeuSIGA - Assistente de Personalização do SIGA Ensino 
+
+    <input name="Tutorial" type="button" id="tutorial" value="Tutorial" class="btn btn-info btn-xs">
+    <input name="Creditos" type="button" id="creditos" value="Créditos" class="btn btn btn-xs">
+
+
+  </h4><br>
+
+<!--Menus -->
+
+  <ul class="nav nav-tabs fonte container" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active " data-toggle="tab" href="#biblio">Biblioteca</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#ensino">Ensino</a>
+    </li>
+
+        <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#assist-estud">Assistência Estudantil</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#dados">Dados Pessoais</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#pesquisa">Pesquisa</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#ufvjm">UFVJM</a>
+    </li>
+
+  </ul>
+
+  <!-- Abas -->
+  <div class="tab-content tab" id= "abas">
+
+    <!-- Submenus de Biblioteca-->
+
+    <div class=" tab-pane active grid-container" id="biblio" align="center">
+   
+      <div id= "consulta0" class=" toggle div-inline"  style="display:" > 
+        <input type="checkbox" id="consultar-acervo" name="toggle">
+        <label for="consultar-acervo"></label>
+        <p class= "nomeToogle"> Consultar Acervos</p>
+      </div>
+
+      <div id= "consulta1" class="toggle div-inline" style="display:" >
+        <input type="checkbox" id="consultar-reserva" name="toggle"> 
+        <label for="consultar-reserva"></label>
+        <p class= "nomeToogle"> Consultar Reservas</p> 
+      </div>
+
+      <div id= "consulta2" class="toggle div-inline" style="display: ">
+        <input type="checkbox" id="renovar-emprestimo" name="toggle">
+        <label for="renovar-emprestimo"></label>
+        <p class= "nomeToogle">Renovar Empréstimos</p> 
+      </div>
+
+      <div id= "consulta3" class="toggle div-inline" style="display: ">
+        <input type="checkbox" id="consultar-multasp" name="toggle">
+        <label for="consultar-multasp"></label>
+        <p class= "nomeToogle"> Consultar Multas Pendentes</p> 
+      </div>
+
+      <div id= "consulta4" class="toggle div-inline" style="display: ">
+        <input type="checkbox" id="consultar-emprestimos" name="toggle">
+        <label for="consultar-emprestimos"></label>
+        <p class= "nomeToogle"> Consultar  Empréstimos</p> 
+      </div>
+
+      <!-- Icones de Biblioteca-->
+
+        <div id = "zoom0" class="div-inline zoom" style="display:none" data-id="consultar-acervo">
+        <a href="http://biblioteca.ufvjm.edu.br/pergamum/biblioteca/index.php" data-toggle="tooltip" data-placement="top" title="Consultar Acervo" target=“_blank” >
+          <img src="images/biblioteca/consultar-acervo.png" style="width:40%" name="icons">
+        </a>
+        <p class= "nomeToogle"> Consultar Acervos</p>
+      </div>
+
+      <div id = "zoom1" class="div-inline zoom" style="display:none" data-id="consultar-reserva">
+        <a href="http://biblioteca.ufvjm.edu.br/pergamum/biblioteca_s/meu_pergamum/emp_reserva.php" data-toggle="tooltip" data-placement="top" title="Consultar Reserva" target=“_blank”>
+          <img src="images/biblioteca/consultar-reserva.png" style="width:40%"  name="icons">
+        </a>
+        <p class= "nomeToogle"> Consultar Reservas</p>
+      </div>
+
+      <div id = "zoom2" class="div-inline zoom" style="display:none" data-id="renovar-emprestimo">
+        <a href="http://biblioteca.ufvjm.edu.br/pergamum/biblioteca_s/meu_pergamum/emp_renovacao.php" data-toggle="tooltip" data-placement="top" title="Renovar Empréstimo" target=“_blank”>
+          <img src="images/biblioteca/renovar-emprestimo.png" style="width:40%"  name="icons">
+        </a>
+        <p class= "nomeToogle"> Renovar Empréstimo</p>
+      </div>
+
+      <div id = "zoom3" class="div-inline zoom" style="display:none" data-id="consultar-multasp">
+        <a href="http://biblioteca.ufvjm.edu.br/pergamum/biblioteca_s/meu_pergamum/emp_debito.php" data-toggle="tooltip" data-placement="top" title="Consultar Multas Pagas" target=“_blank”>
+          <img src="images/biblioteca/consultar-multas-pagas.png" style="width:40%"  name="icons" >
+        </a>
+        <p class= "nomeToogle"> Consultar Multas Pagas</p>
+      </div>
+
+      <div id = "zoom4" class="div-inline zoom" style="display:none" data-id="consultar-emprestimos">
+        <a href="http://biblioteca.ufvjm.edu.br/pergamum/biblioteca_s/meu_pergamum/emp_pendente.php" data-toggle="tooltip" data-placement="top" title="Consultar Emprestimo" target=“_blank”>
+          <img src="images/biblioteca/consultar-emprestimo.png" style="width:40%"  name="icons">
+        </a>
+        <p class= "nomeToogle"> Consultar Empréstimo</p>
+      </div>
+
+    </div>
+
+    <!-- Submenus de Ensino-->
+
+    <div id="ensino" class="tab-pane fade grid-container-ensino"><br>
+
+      <div id= "consulta5" class=" toggle div-inline-ensino" style="display: "> 
+        <input type="checkbox" id="notas" name="toggle"> 
+        <label for="notas"></label>
+        <p> Notas</p>
+      </div>
+
+      <div id= "consulta6" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="matricula" name="toggle" > 
+        <label for="matricula"></label>
+        <p>Matrícula</p> 
+      </div>
+
+      <div id= "consulta7" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="historico" name="toggle" > 
+        <label for="historico"></label>
+        <p>Histórico</p> 
+      </div>
+
+
+      <div id= "consulta8" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="horarios-aluno" name="toggle" > 
+        <label for="horarios-aluno"></label>
+        <p>Horários do Aluno</p> 
+      </div>
+
+
+      <div id= "consulta9" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="horarios-curso" name="toggle" > 
+        <label for="horarios-curso"></label>
+        <p>Horários por Curso</p> 
+      </div>
+
+
+      <div id= "consulta10" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="horarios-disciplina" name="toggle" > 
+        <label for="horarios-disciplina"></label>
+        <p>Horários por Disciplinas</p> 
+      </div>
+
+
+      <div id= "consulta11" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="plano-ensino-publicado" name="toggle" > 
+        <label for="plano-ensino-publicado"></label>
+        <p>Plano de Ensino Publicados</p> 
+      </div>
+
+
+      <div id= "consulta12" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="plano-oferta-disciplina" name="toggle" > 
+        <label for="plano-oferta-disciplina"></label>
+        <p>Plano de Oferta de Disciplinas</p> 
+      </div>
+
+
+      <div id= "consulta13" class="toggle div-inline-ensino" style="display: ">
+        <input type="checkbox" id="extrato-cra" name="toggle" > 
+        <label for="extrato-cra"></label>
+        <p>Extrato de CRA</p> 
+      </div>
+
+      <!-- Icones de Ensino-->
+
+      <div id = "zoom5" class="div-inline zoom" style="display:none"  data-id="notas">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:quadronotasparciais" data-toggle="tooltip" data-placement="top" title="Notas" target=“_blank”>
+          <img src="images/ensino/notas.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Notas</p>
+      </div>
+
+      <div id = "zoom6" class="div-inline zoom" style="display:none"  data-id="matricula" >
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:prematricula" data-toggle="tooltip" data-placement="top" title="Matrícula" target=“_blank”>
+          <img src="images/ensino/matricula.png" style="width:35%"name="icons">
+        </a>
+        <p class= "nomeToogle">Matrícula</p>
+      </div>
+
+      <div id = "zoom7" class="div-inline zoom" style="display:none"  data-id="historico">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:historicoaluno&matricula=20122016020&event=btnPost:click" data-toggle="tooltip" data-placement="top" title="Histórico" target=“_blank”>
+          <img src="images/ensino/historico.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Histórico</p>
+      </div>
+
+      <div id = "zoom8" class="div-inline zoom" style="display:none" data-id="horarios-aluno">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:horariosaluno" data-toggle="tooltip" data-placement="top" title="Horários do Aluno" target=“_blank”>
+          <img src="images/ensino/horario-aluno.png" style="width:35%"  name="icons">
+        </a>
+        <p class= "nomeToogle">Horários do Aluno</p>
+      </div>
+
+      <div id = "zoom9" class="div-inline zoom" style="display:none"  data-id="horarios-curso">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:consultahorario" data-toggle="tooltip" data-placement="top" title="Horários por Curso" target=“_blank”>
+          <img src="images/ensino/horario-curso.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Horários por Curso</p>
+      </div>
+
+      <div id = "zoom10" class="div-inline zoom" style="display:none" data-id="horarios-disciplina" >
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:turmas:horariolinear1" data-toggle="tooltip" data-placement="top" title="Horários por Disciplina" target=“_blank”>
+          <img src="images/ensino/horario-disciplina.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Horários por Disciplina</p>
+      </div>
+
+      <div id = "zoom11" class="div-inline zoom" style="display:none"  data-id="plano-ensino-publicado">
+        <a href="http://siga.ufvjm.edu.br/index.php?module=ensino&mode=compatibilidade&action=main:turmas:conplanoensino" data-toggle="tooltip" data-placement="top" title="Plano de Ensino" target=“_blank”>
+          <img src="images/ensino/plano-ensino.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Plano de Ensino</p>
+      </div>
+
+      <div id = "zoom12" class="div-inline zoom" style="display:none"  data-id="plano-oferta-disciplina">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:turmas:planodep" data-toggle="tooltip" data-placement="top" title="Plano de Oferta de disciplina" target=“_blank”>
+          <img src="images/ensino/plano-disciplina.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Plano de Oferta de Disciplina</p>
+      </div>
+
+      <div id = "zoom13" class="div-inline zoom" style="display:none"  data-id="extrato-cra">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=ensino&action=main:extratocra" data-toggle="tooltip" data-placement="top" title="Extrato de CRA" target=“_blank”>
+          <img src="images/ensino/extrato-cra.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Extrato de CRA</p>
+      </div>
+
+  </div>
+
+  <!-- Submenus de Assistência Estudantil-->
+
+    <div id="assist-estud" class="tab-pane fade grid-container-assistencia"><br>
+
+      <div id= "consulta14" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="formulario-socioeconomico" name="toggle"> 
+        <label for="formulario-socioeconomico"></label>
+        <p> Formulário Socioeconômico</p>
+      </div>
+
+      <div id= "consulta15" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="visualizar-editais" name="toggle"> 
+        <label for="visualizar-editais"></label>
+        <p> Visualizar Editais</p>
+      </div>
+
+      <div id= "consulta16" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="situacao-processo" name="toggle"> 
+        <label for="situacao-processo"></label>
+        <p> Situação no Processo</p>
+      </div>
+
+      <div id= "consulta17" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="recurso" name="toggle"> 
+        <label for="recurso"></label>
+        <p> Recurso</p>
+      </div>
+
+  <!-- Icones de Assitência Estudantil-->
+
+      <div id = "zoom14" class="div-inline zoom" style="display:none" data-id="formulario-socioeconomico" >
+        <a href="https://siga.ufvjm.edu.br/index.php?module=assistenciaestudantil&action=main:termos" data-toggle="tooltip" data-placement="top" title="Formulário Socioeconômico" target=“_blank”>
+          <img src="images/assist-estud/formulario.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Formulário Socioeconômico</p>
+      </div>
+
+      <div id = "zoom15" class="div-inline zoom" style="display:none"  data-id="visualizar-editais">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=assistenciaestudantil&action=main:visualizareditais" data-toggle="tooltip" data-placement="top" title="Visualizar editais" target=“_blank”>
+          <img src="images/assist-estud/visualizar-edital.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Visualizar Edital</p>
+      </div>
+
+      <div id = "zoom16" class="div-inline zoom" style="display:none"  data-id="situacao-processo">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=assistenciaestudantil&action=main:visualizarstatusaluno" data-toggle="tooltip" data-placement="top" title="Situação no Processo" target=“_blank”>
+          <img src="images/assist-estud/situacao.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Situação no Processo</p>
+      </div>
+
+      <div id = "zoom17" class="div-inline zoom" style="display:none"  data-id="recurso">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=assistenciaestudantil&action=main:recursosaluno:find" data-toggle="tooltip" data-placement="top" title="Situação no Processo" target=“_blank”>
+          <img src="images/assist-estud/recurso.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Recurso</p>
+      </div>
+    </div>
+
+  <!-- Submenus de Dados Pessoais-->
+
+      <div id="dados" class="tab-pane fade grid-container-assistencia"><br>
+
+      <div id= "consulta18" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="alterar-dados-pessoais" name="toggle"> 
+        <label for="alterar-dados-pessoais"></label>
+        <p> Alterar Dados Pessoais</p>
+      </div>
+
+      <div id= "consulta19" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="alterar-email" name="toggle"> 
+        <label for="alterar-email"></label>
+        <p> Alterar Email</p>
+      </div>
+
+      <div id= "consulta20" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="alterar-senha" name="toggle"> 
+        <label for="alterar-senha"></label>
+        <p> Alterar Senha</p>
+      </div>
+
+  <!-- Icones de Dados Pessoais-->
+
+
+      <div id = "zoom18" class="div-inline zoom" style="display:none" data-id="alterar-dados-pessoais">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=common&action=dadospessoais" data-toggle="tooltip" data-placement="top" title="Alterar dados pessoais" target=“_blank”>
+          <img src="images/dados/alterar-dados.png" style="width:35%"  name="icons">
+        </a>
+        <p class= "nomeToogle">Alterar Dados Pessoais</p>
+      </div>
+
+      <div id = "zoom19" class="div-inline zoom" style="display:none"  data-id="alterar-email">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=common&action=main:email" data-toggle="tooltip" data-placement="top" title="Alterar Email" target=“_blank”>
+          <img src="images/dados/alterar-email.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Alterar Email</p>
+      </div>
+
+      <div id = "zoom20" class="div-inline zoom" style="display:none"  data-id="alterar-senha">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=common&action=main:password" data-toggle="tooltip" data-placement="top" title="Alterar Senha" target=“_blank”>
+          <img src="images/dados/alterar-senha.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Alterar Senha</p>
+      </div>
+
+    </div>
+
+  <!-- Submenus de Pesquisa-->
+
+      <div id="pesquisa" class="tab-pane fade grid-container-assistencia"><br>
+
+      <div id= "consulta21" class="toggle div-inline-assistencia" style="display: "> 
+        <input type="checkbox" id="projetos-participantes" name="toggle"> 
+        <label for="projetos-participantes"></label>
+        <p> Projetos como Participante</p>
+      </div>
+
+  <!-- Icones de Dados Pessoais-->
+
+      <div id = "zoom21" class="div-inline zoom" style="display:none" data-id="projetos-participantes">
+        <a href="https://siga.ufvjm.edu.br/index.php?module=pesquisa&action=main:projetosdepesquisa:projetoscomoparticipante" data-toggle="tooltip" data-placement="top" title="Projetos Participantes" target=“_blank”>
+          <img src="images/pesquisa/projetos-participantes.png" style="width:35%"  name="icons">
+        </a>
+        <p class= "nomeToogle">Dados Pessoais</p>
+      </div>
+
+    </div>
+
+  <!-- Submenus de UFVJM-->
+
+      <div id="ufvjm" class="tab-pane fade grid-container"><br>
+
+      <div id= "consulta22" class="toggle div-inline" style="display: "> 
+        <input type="checkbox" id="moodle" name="toggle"> 
+        <label for="moodle"></label>
+        <p> Moodle</p>
+      </div>
+
+      <div id= "consulta23" class="toggle div-inline" style="display: "> 
+        <input type="checkbox" id="webmail" name="toggle"> 
+        <label for="webmail"></label>
+        <p> Webmail</p>
+      </div>
+
+      <div id= "consulta24" class="toggle div-inline" style="display: "> 
+        <input type="checkbox" id="portal" name="toggle"> 
+        <label for="portal"></label>
+        <p> Portal</p>
+      </div>
+
+  <!-- Icones de Dados UFVJM-->
+
+      <div id = "zoom22" class="div-inline zoom" style="display:none" data-id="moodle">
+        <a href="http://moodle.ead.ufvjm.edu.br/" data-toggle="tooltip" data-placement="top" title="Moodle" target=“_blank”>
+          <img src="images/ufvjm/moodle.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Moodle</p>
+      </div>
+
+      <div id = "zoom23" class="div-inline zoom" style="display:none" data-id="webmail">
+        <a href="https://mail.ufvjm.edu.br/" data-toggle="tooltip" data-placement="top" title="Webmail" target=“_blank”>
+          <img src="images/ufvjm/webmail.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Webmail</p>
+      </div>
+
+      <div id = "zoom24" class="div-inline zoom" style="display:none" data-id="portal">
+        <a href="http://www.ufvjm.edu.br/" data-toggle="tooltip" data-placement="top" title="Portal" target=“_blank”>
+          <img src="images/ufvjm/ufvjm.png" style="width:35%" name="icons">
+        </a>
+        <p class= "nomeToogle">Portal</p>
+      </div>
+
+    </div>
+
+</div>
+
+
+
+  <!-- Botões -->
+
+  <div class=" grid-container-all">
+    
+   <!--Botão Editar-->
+  <div class="item1">
+     <button type="button" class="btn btn-warning" id="edita" style="display:none">Editar</button> <!--onclick chama função que retorna todos os checkbox-->
+  </div>
+
+  <!--Botão Cancelar-->
+  <div class=" item2">
+    <button type="button" class="btn btn-danger" id="cancela" >Cancelar</button> <!-- onclick chama função para desmarcar os ckeckbox-->
+  </div>
+  
+  <!--Botão Aplicar-->
+  <div class=" item1">
+    <button type="button" class="btn btn-success" id="aplica" disabled> Aplicar</button> <!--onclick chama função que verifica os checkbox e pega as img correspondentes-->
+  </div>
+
+</body>
+
+</html>

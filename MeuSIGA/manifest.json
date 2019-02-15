@@ -1,0 +1,34 @@
+{
+ "name": "MeuSIGA",
+ "version": "1.2.1",
+ "manifest_version": 2,
+ "description": "Meu SIGA,  extensão que permite que os discentes da UFVJM atuem como designers do módulo Ensino do SIGA",
+ 
+
+
+ "icons": { "12": "logo.png" },
+
+
+"browser_action": {
+  "default_icon": "logo.png",
+  "default_popup": "index.html"
+},
+
+
+"permissions": [
+	"background",
+	"activeTab",
+	"http://*.google.com/"
+   ],
+
+"commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+S",
+          "mac": "MacCtrl+Shift+S"
+        }
+
+      }
+}
+
+}

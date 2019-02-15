@@ -1,0 +1,263 @@
+
+
+/** Adicionar fonte local **/
+@font-face {
+    font-family: "AlegreyaSans";
+    src: local(AlegreyaSans), url(../fonts/Alegreya/AlegreyaSans-Regular.ttf);
+}
+
+/** Margens **/
+
+div.container {
+    height: 400px;
+    max-width : 800px;
+    padding-top: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+/** Configuração do body **/ 
+
+.layout {
+    padding-left: 20px;
+    float: left;
+    padding-bottom: 90px;
+    margin-top: 10px;
+    min-width: 800px; 
+}
+
+.bg-1 { 
+       background-color: #1abc9c; /* Green */
+        color: #ffffff;
+        height: 170px;
+    }
+
+/** Configuração do título**/
+
+.titulo{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-family: "AlegreyaSans";
+    font-size:22px;
+}
+
+.titulotuto{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-family: "AlegreyaSans";
+    font-size:28px;
+}
+
+.corpo{
+    padding-left: 50px;
+    padding-right: 50px;
+    align-content: center;
+    padding-bottom: 10px;
+    font-family: "AlegreyaSans";
+    font-size:16px;
+}
+
+/** Configuração dos nomes dos toogles */
+
+p.nomeToogle{
+    font-size:14px;
+    font-family: "AlegreyaSans";
+    vertical-align: middle;
+}
+
+/** Toggle Switch**/
+
+body {
+    background: #eee;
+}
+
+.toggle {
+    margin-bottom: 40px;
+}
+
+.toggle > input {
+    display: none;
+}
+
+.toggle > label {
+    position: relative;
+    
+    height: 20px;
+    width: 44px;
+    background: #e0e0e0;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} 
+.toggle > label:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #898989; 
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+.toggle > label:active:after {
+    transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label {
+    background:#d6f5f9 ;
+}
+.toggle > input:checked ~ label:after {
+    left: 20px;
+    background: #0457ef;
+}
+.toggle > input:disabled ~ label {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+.toggle > input:disabled ~ label:after {
+    background: #bcbdbc;
+}
+
+
+/** Alinhar os div´s dos toogles**/
+.div-inline {
+    display: inline-block;
+    width: 170px;
+    height: 100px;
+    margin: 0.5em;
+}
+
+/** Efeito zoom das imagens **/
+
+.zoom {
+    padding: auto;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.botao{
+    margin-left: 10px;
+}
+
+.tab{
+    display: table;
+}
+
+
+/** Configuração do grid onde fica os ícones de: biblioteca **/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  float: left;
+  max-width: 580px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+} 
+.grid-container>div {
+
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+/** Configuração do grid onde fica os ícones de: ensino **/
+.grid-container-ensino {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  float: left;
+  max-width: 580px;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  margin-left: 10px;
+
+} 
+.grid-container-ensino>div {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+/** Alinhar os div´s dos toogles de Ensino**/
+.div-inline-ensino {
+    display: inline-block;
+    width: 170px;
+    height: 91px;
+    margin: 0.5em;
+}
+
+
+
+/** Configuração do grid onde fica os ícones de: assistencia estudantil **/
+.grid-container-assistencia{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  float: left;
+  max-width: 450px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+} 
+.grid-container-assistencia>div {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+/** Alinhar os div´s dos toogles de Ensino**/
+.div-inline-assistencia {
+    display: inline-block;
+    width: 170px;
+    height: 100px;
+    margin: 0.5em;
+}
+
+
+/** Grid dos botões**/ 
+.grid-container-all {
+  display: grid;
+  grid:
+    'header header header header header header'
+    'header header header header header header'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+
+  padding: 5px;
+  max-width: 300px;
+  margin-left: 20px; 
+  margin-bottom: -10px;
+
+}
+.grid-container-footer>div {
+
+  text-align: center;
+  padding:10px 0;
+  font-size: 10px;
+}
+.item1 { 
+    grid-area: footer;
+    margin-left: 0px; 
+}
+
+.item2 { 
+    grid-area: footer; 
+    padding-left: 120px;
+}
